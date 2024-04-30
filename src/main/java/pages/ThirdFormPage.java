@@ -158,6 +158,7 @@ public class ThirdFormPage {
     public List<String> getCivilStatusList(){
         List<WebElement> allOptions = locateDropdown(civilStatusWrapper).getOptions();
         allOptions.remove(0);
+        allOptions.remove(1);
         return allOptions.stream().map(e->e.getText()).collect(Collectors.toList());
     }
     public void selectCivilStatus(String civilStatus){

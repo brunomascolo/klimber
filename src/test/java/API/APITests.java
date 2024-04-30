@@ -60,6 +60,7 @@ public class APITests {
         Response response = requestSpecification.get();
         JsonObject jsonResponse = JsonParser.parseString(response.getBody().asString()).getAsJsonObject();
         JsonArray tracks = jsonResponse.getAsJsonArray("tracks");
+        System.out.println("The top tracks are:");
         for (int i = 0; i < tracks.size(); i++) {
             JsonObject track = tracks.get(i).getAsJsonObject();
             String trackName = track.get("name").getAsString();
