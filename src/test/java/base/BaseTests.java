@@ -17,7 +17,6 @@ public class BaseTests {
     public void setUp(){
         System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
         driver = new EventFiringWebDriver(new ChromeDriver(getChromeOptions()));
-        //driver.register(new EventReporter());
         goHome();
 
     }
